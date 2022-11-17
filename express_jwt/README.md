@@ -6,13 +6,11 @@
 
 Create a new project and configure according to the **express** example.
 
-
-
-
-
 You are prompted with several things. Select ```index.js``` as the entry point.   
-Then install express.js ```npm install express```  
+Then install express.js ```npm install express```,
+JWT library ```npm install jsonwebtoken```,   
 and packages for form processing: ```npm install body-parser multer```  
+
 Now copy the index.js file and the templates folder and run the server: ```node index.js```   
 
 *A better approach*:   
@@ -22,7 +20,5 @@ After that you can start the server: ```nodemon index.js```
 ## URLs
 
 **/** : displays plain text         
-**/about** : displays the templates/about.html page  
-**/api** : return JSON data  
-**/add** : adds data from a form or json request  
-**/data** : page to consume API
+**/api/login** : login, if username and password are correct returns the jwt
+**/api/data** : checks the jwt token and returns user info if token is valid  
